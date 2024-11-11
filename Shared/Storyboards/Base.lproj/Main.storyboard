@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ryb-y0-7rQ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="zu0-nG-vOh">
+                                <rect key="frame" x="83.000000000000014" y="407" width="227.33333333333337" height="38.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7H-oc-Gcf">
+                                        <rect key="frame" x="0.0" y="0.0" width="227.33333333333337" height="38.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Open Emoji ViewController"/>
+                                        <connections>
+                                            <segue destination="N6M-XB-egQ" kind="show" id="aNn-o9-qT1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="137" translatesAutoresizingMaskIntoConstraints="NO" id="Pod-xw-sAF">
+                                <rect key="frame" x="38" y="118" width="317" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable swizzling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNK-Tq-gJk">
+                                        <rect key="frame" x="0.0" y="0.0" width="131" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Enable Swizzling" translatesAutoresizingMaskIntoConstraints="NO" id="qsJ-2T-HbZ">
+                                        <rect key="frame" x="268" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="swizzlingEnabledAc:" destination="BYZ-38-t0r" eventType="valueChanged" id="LOw-5N-poU"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zu0-nG-vOh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jee-h0-6bQ"/>
+                            <constraint firstItem="zu0-nG-vOh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KLL-zo-jrY"/>
+                            <constraint firstItem="Pod-xw-sAF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hI8-at-eP8"/>
+                            <constraint firstItem="Pod-xw-sAF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="wTS-G3-gXU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="V0d-2D-a4t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="4"/>
+        </scene>
+        <!--Emoji View Controller-->
+        <scene sceneID="XME-4x-bOH">
+            <objects>
+                <viewController id="N6M-XB-egQ" customClass="EmojiViewController" customModule="EmojiTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ts-tg-ZKk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2th-g1-0bE">
+                                <rect key="frame" x="0.0" y="301" width="393" height="250"/>
+                                <color key="backgroundColor" white="0.90000000000000002" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="LlM-Rp-Rvr"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rhO-QP-xHe">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="emojiCell" id="6DL-Fu-4Ff" customClass="EmojiUILabelCollectionViewCell" customModule="EmojiTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0YH-nY-Dg7">
+                                            <rect key="frame" x="0.0" y="0.0" width="53" height="57"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZm-7Z-e6S">
+                                                    <rect key="frame" x="0.0" y="0.0" width="53" height="57"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="rZm-7Z-e6S" secondAttribute="bottom" id="Zdv-pg-uDy"/>
+                                                <constraint firstAttribute="trailing" secondItem="rZm-7Z-e6S" secondAttribute="trailing" id="cfS-9x-Fdg"/>
+                                                <constraint firstItem="rZm-7Z-e6S" firstAttribute="leading" secondItem="0YH-nY-Dg7" secondAttribute="leading" id="vOR-Cm-9Y5"/>
+                                                <constraint firstItem="rZm-7Z-e6S" firstAttribute="top" secondItem="0YH-nY-Dg7" secondAttribute="top" id="xTU-kf-4Dw"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="53" height="57"/>
+                                        <connections>
+                                            <outlet property="emojiLabel" destination="rZm-7Z-e6S" id="8fh-0q-smj"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDQ-w0-Civ">
+                                <rect key="frame" x="175.33333333333334" y="240.66666666666666" width="42.666666666666657" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qZ3-wR-vyc">
+                                <rect key="frame" x="82.333333333333329" y="563" width="228.33333333333337" height="76.666666666666629"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8b-MC-fTY">
+                                        <rect key="frame" x="23.333333333333343" y="0.0" width="181.66666666666666" height="38.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Fill 70% of mem limit"/>
+                                        <connections>
+                                            <action selector="fill70PercentOfMemoryBtnAc:" destination="N6M-XB-egQ" eventType="touchUpInside" id="dhe-ZL-poO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raJ-Ve-MJ1">
+                                        <rect key="frame" x="0.0" y="38.333333333333371" width="228.33333333333334" height="38.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Allocate 101% of mem limit"/>
+                                        <connections>
+                                            <action selector="fill101PercentOfMemoryBtnAc:" destination="N6M-XB-egQ" eventType="touchUpInside" id="iHs-ho-pPk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nbq-Oc-eO5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nbq-Oc-eO5" firstAttribute="trailing" secondItem="2th-g1-0bE" secondAttribute="trailing" id="1Tm-xv-haK"/>
+                            <constraint firstItem="2th-g1-0bE" firstAttribute="top" secondItem="SDQ-w0-Civ" secondAttribute="bottom" constant="40" id="Idu-rP-WjY"/>
+                            <constraint firstItem="2th-g1-0bE" firstAttribute="centerX" secondItem="2ts-tg-ZKk" secondAttribute="centerX" id="Nko-hw-BQV"/>
+                            <constraint firstItem="2th-g1-0bE" firstAttribute="leading" secondItem="nbq-Oc-eO5" secondAttribute="leading" id="YBz-dt-XdR"/>
+                            <constraint firstItem="SDQ-w0-Civ" firstAttribute="centerX" secondItem="2ts-tg-ZKk" secondAttribute="centerX" id="kW5-Pg-BZe"/>
+                            <constraint firstItem="2th-g1-0bE" firstAttribute="centerY" secondItem="2ts-tg-ZKk" secondAttribute="centerY" id="n5d-tO-yMI"/>
+                            <constraint firstItem="qZ3-wR-vyc" firstAttribute="centerX" secondItem="2ts-tg-ZKk" secondAttribute="centerX" id="nE5-8S-Vz5"/>
+                            <constraint firstItem="qZ3-wR-vyc" firstAttribute="top" secondItem="2th-g1-0bE" secondAttribute="bottom" constant="12" id="zQ4-JO-gnc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="swB-Sw-REd"/>
+                    <connections>
+                        <outlet property="collectionView" destination="2th-g1-0bE" id="rPA-jZ-TV2"/>
+                        <outlet property="emojiCountLabel" destination="SDQ-w0-Civ" id="NBv-j2-PhN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hPb-bj-52a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1353" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PoB-ry-lRk">
+            <objects>
+                <navigationController storyboardIdentifier="mainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="ryb-y0-7rQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fAW-cJ-EhK">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="U4C-Qc-O0b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcE-ZE-5fM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-364" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

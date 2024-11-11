@@ -1,0 +1,15 @@
+.DS_Store
+Podfile.lock
+Pods/
+xcuserdata/
+xcuserdata/*
+*.realm.lock
+*.realm.management
+
+*.build
+**/Packages
+**/DerivedData/
+**/.swiftpm/config/registries.json
+**/.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
+*.resolved
